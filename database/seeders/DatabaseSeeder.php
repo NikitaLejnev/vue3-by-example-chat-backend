@@ -42,4 +42,21 @@ class DatabaseSeeder extends Seeder
             ]);
         }
     }
+
+    private function addMessages()
+    {
+        for ($x = 0; $x <= 1; $x++) {
+            DB::table('messages')->insert([
+                'message' => 'hello',
+                'user_id' => User::all()->get(0)->id,
+                'chat_id' => Chat::all()->get($x)->id
+            ]);
+
+            DB::table('messages')->insert([
+                'message' => 'how are you',
+                'user_id' => User::all()->get(1)->id,
+                'chat_id' => Chat::all()->get($x)->id
+            ]);
+        }
+    }
 }
