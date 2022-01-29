@@ -33,4 +33,13 @@ class DatabaseSeeder extends Seeder
             ]);
         }
     }
+
+    private function addChats()
+    {
+        for ($x = 0; $x <= 1; $x++) {
+            DB::table('chats')->insert([
+                'name' => 'chat '.$x,
+            ]);
+        }
+    }
 }
