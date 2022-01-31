@@ -46,7 +46,7 @@ class ChatController extends Controller
         }
 
         $chat = Chat::find($request->id);
-        $chat->name = $request->get('name');
+        $chat->name =  $request->get('name');
         $chat->save();
 
         return response()->json($chat);

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Message;
-use App\Models\MessageSent;
+use App\Events\MessageSent;
 
 class MessageController extends Controller
 {
